@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} SignUp {% endblock title %}
+{% block content %}
+<div class="a row text-center justify-content-center mx-auto font-weight-bold " style="height: 120vh;">
+<form enctype="multipart/form-data" action="" method="POST" class=" col-2 mx-auto color-text-addM mt-5">
+        {{form}}
+        {% csrf_token %}
+        <button type="submit" class="btn  my-3 mx-3 btn-addM">Signup</button>
+</form>
+</div>
+{% endblock content %}

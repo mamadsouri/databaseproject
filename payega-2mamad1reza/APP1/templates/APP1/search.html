@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} Search {% endblock title %}
+
+{% block content %}
+    <div class="container-fluid row mx-auto justify-content-center a text-warning font-weight-bold" style="height: 150vh;">
+        <div class="mt-5">
+            <form method="POST" class="post-form py-4" action="/search/" id="editform">
+                
+                {% csrf_token %}
+                <div class="row">
+                    <label for="nameid" class="col-6 color-text-search">Search By Title  : </label>
+                    <input type="text" id="nameid" value="" name="etitle" class="col-6"> 
+                </div>
+                
+                
+                <br>
+                <div class="row">
+                    <label for="nameid" class="col-6 color-text-search">Search By Student : </label>
+                    <input type="text" id="nameid" value="" name="estudent" class="col-6"> 
+                </div>
+                
+                <br>
+                <div class="row">
+                <label for="quantity" class="col-6 color-text-search">Search By Professor :</label>
+                <input type="text" id="quantity" name="eprofessor"class="col-6">
+                </div>
+                <br>
+                <input type="submit" value="search" class="btn btn-success btn-block">
+                <br>
+                <div class=" container-fluid row justify-content-center mx-auto">
+                {% for magh in maghale %}
+                
+                <div class="card col-auto text-center b m-1" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title font-weight-bold font-italic color-text-search-card">{{ magh.title_Maghale }}</h5>
+                    <h6 class="card-subtitle mb-2 color-text">{{magh.Grouping_Maghale}}</h6>
+                    <h6 class="card-subtitle mb-2 color-text">{{magh.Code_Maghale}}</h6>
+                    <p class="card-text">{{magh.getsnippet}}</p>                    
+                    <a href="{% url 'details' magh.id %}" class="card-link color-link">Go somewhere</a>
+                    </div>
+                
+                </div> 
+
+            
+                {% endfor %}
+            </div>
+            </form>
+        </div>
+    </div>
+        
+    
+{% endblock content %}
+
+{{magh.title_Maghale}}

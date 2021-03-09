@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %} Details {% endblock title %}
+
+    
+
+    {% block content %}
+    <div class="a" style="height: 100vh;">
+    <div class="row container mx-auto card bg-card-details pt-3 ">
+        <h1 class="text-black font-weight-bold mx-auto pb-3">{{maghale.title_Maghale}}</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><h5 class=" font-weight-bold text-center">Article Code</h5></th>
+                <th scope="col"><h5 class=" font-weight-bold text-center">Article Type</h5></th>
+                <th scope="col"><h5 class=" font-weight-bold text-center">Superviser</h5></th>
+                <th scope="col"><h5 class=" font-weight-bold text-center">Student Name</h5></th>
+                <th scope="col"><h5 class=" font-weight-bold text-center">Status</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class=" font-weight-bold text-center">{{maghale.Code_Maghale}}</th>
+                <td class=" font-weight-bold text-center">{{maghale.Grouping_Maghale}}</td>
+                <td class=" font-weight-bold text-center">{{maghale.Professor_Maghale}}</td>
+                <td class=" font-weight-bold text-center">{{maghale.student}}</td>
+                <td class=" font-weight-bold text-center">{{maghale.vaziat}}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        <div class=" row container mx-auto justify-content-center card-footer"> 
+            <a class="btn btn-primary  " href="{{ maghale.file.url }}" > Download PDF </a>
+        </div>
+    </div>
+    <div class=" container row mx-auto justify-content-center my-3">
+        {% if user in maghale.like.all %}
+        <a href="{% url 'postunlike' maghale.id %}" class="btn btn-danger">unlike</a>
+        {% else %}
+        <a href="{% url 'postlike' maghale.id %}" class="btn btn-success">like</a>
+        {% endif %}
+    </div>
+</div> 
+    {% endblock content %}
+
+    
+
+      <!-- <div class=" col-12 text-center ">
+        
+        <p class=" font-weight-bold text-black">
+        Code_Maghale_is: {{maghale.Code_Maghale}}
+        </p>
+        <p class=" font-weight-bold text-black">
+        Grouping_Maghale_is: {{maghale.Grouping_Maghale}}
+        </p>
+        <p class=" font-weight-bold text-black">
+            Professor_Maghale_is: {{maghale.Professor_Maghale}}
+        </p>
+        <p class=" font-weight-bold text-black">
+            student_is: {{maghale.student}}
+        </p>
+        
+    
+    </div> -->

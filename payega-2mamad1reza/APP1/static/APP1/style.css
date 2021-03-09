@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+.a{
+    background: linear-gradient( #1A1A1D, #116466) fixed ;
+   }
+.b{
+    background: linear-gradient( rgba(5, 104, 161, 0.5), rgba(218, 211, 211, 0.5));
+    border-radius: 3%;
+    transition: all 0.5s linear;
+}
+.b:hover{
+    transform: scale(1.05);
+}
+.color-text{
+    color: rgb(15, 15, 15);
+}
+.color-link{
+    color: rgb(6, 63, 41);
+}
+.bg-nav-color{
+    background: linear-gradient(to right, rgb(6, 86, 88), rgba(9, 104, 160, 0.5),rgb(6, 86, 88));
+}
+.owerflow-hiden{
+    overflow-x: hidden; 
+}
+.text-color-nav{
+    color: rgb(85, 7, 7);
+    font-weight: 1000;
+    transition: all 0.4s linear;
+}
+.text-color-nav:hover{
+    
+    color: rgb(175, 66, 15);
+    
+}
+.btn-add-m{
+    color: #1A1A1D;
+    font-weight: 700;
+    transition: all 0.5s linear;
+}
+.btn-add-m:hover{
+    padding-right:2%;
+    padding-left: 2%;
+    background: linear-gradient(to right, rgb(9, 131, 133), rgba(11, 126, 192, 0.5),rgb(9, 131, 133));
+    color: #1A1A1D;
+}
+.btn-logout{
+    clip-path: polygon(40% 0%,40% 14%,100% 14%,100% 83%,40% 83%,40% 100%,0% 50%);
+    transition: all 0.75s linear;
+}
+.btn-logout:hover{
+    background-color: rgb(197, 56, 56);
+}
+.btn-login{
+    clip-path: polygon(0% 16%,60% 16%,60% 0%,100% 50%,60% 100%,59% 84%,0% 84%);
+}
+.btn-login:hover{
+    background-color: rgb(15, 136, 86);
+}
+.color-text-search{
+    color: rgb(255, 255, 255);
+}
+.color-text-search-card{
+    color: rgb(136, 45, 45);
+}
+.bg-card-details{
+    background: linear-gradient( rgba(5, 104, 161, 0.5), rgba(218, 211, 211, 0.5));
+}
+.color-text-addM{
+    color: rgb(255, 136, 0);
+}
+.btn-addM{
+    color: #1A1A1D;
+    background: linear-gradient(to right, rgba(5, 104, 161, 0.5), rgba(211, 218, 213, 0.5));
+    font-weight: 700;
+    padding-left: 12%;
+    padding-right: 12%;
+    transition: all 0.5s linear;
+}
+.btn-addM:hover{
+    padding-left: 16%;
+    padding-right: 16%;
+    background: linear-gradient(to right, rgb(9, 131, 133), rgba(11, 126, 192, 0.5),rgb(9, 131, 133));
+   
+}
+.text-Aboutus-color{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 900;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 2.5;
+}
+textarea {
+    resize: none;
+  }
